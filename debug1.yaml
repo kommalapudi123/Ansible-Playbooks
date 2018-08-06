@@ -1,0 +1,15 @@
+--- # debug module for example
+- hosts: local
+  user: ansible
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Install the webserver
+      yum: name=httpd state=installed
+    - debug: msg='equivalent of sudo yum install httpd'
+    - name: How long has the system been up?
+      shell: /usr/bin/uptime
+      register: result
+    - debug: var=result
+

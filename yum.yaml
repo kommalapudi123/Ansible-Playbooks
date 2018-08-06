@@ -1,0 +1,11 @@
+--- # Yum module Example
+- hosts: local
+  user: ansible
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Install apache webserver
+      action: yum name=httpd state=latest
+
+ 

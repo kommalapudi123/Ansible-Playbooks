@@ -1,0 +1,13 @@
+--- #playbook to install git
+- hosts: local
+  remote_user: ansible
+  become: yes
+  become_method: sudo 
+  connection: ssh
+  gather_facts: yes
+  tasks:
+  - name: install git
+    yum:
+       name: git
+       state: latest  
+      

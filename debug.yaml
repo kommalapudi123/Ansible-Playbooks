@@ -1,0 +1,14 @@
+--- # playbook  demo of debug and register statements
+- hosts: local
+  remote_user: ansible 
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+  tasks:
+  - name: installing telnet package
+    yum:
+      name: telnet
+      state: latest
+    register : result 
+  - debug: var=result 
