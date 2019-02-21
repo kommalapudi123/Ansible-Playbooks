@@ -1,0 +1,7 @@
+--- # installing lynx on local server
+- hosts: local
+  vars:
+   controlserver: 
+  tasks:
+  - name: install lynx on local server
+    yum: pkg=lynx state=installed update_cache=true

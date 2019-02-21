@@ -1,0 +1,7 @@
+---#testing how variables work in the var section of a playbook
+- hosts: '{{ myhosts }}'
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  hhkk

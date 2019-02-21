@@ -1,0 +1,9 @@
+--- # DNF MODULE EXAMPLE
+- hosts: local
+  user: ansible
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Instaling apache webserver with dnf
+      dnf: name=httpd state=latest 
