@@ -1,0 +1,12 @@
+--- # CRON MODULE EXAMPLE
+- hosts: apacheserver
+  user: ansible
+  connection: ssh
+  gather_facts: no
+  tasks:
+   - name: add a CRON job to the ansbile
+     cron:
+        name: "create files"
+        minute: "32"
+        hour: "17"
+        job: "ls -alh /etc > /home/ansible/cronresult.log"

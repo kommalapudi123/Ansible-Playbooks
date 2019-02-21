@@ -1,0 +1,6 @@
+--- # My First YAML Playbook for Ansible
+- hosts: apacheserver -->target section where this pb is going to run (hname,ip,group name)
+  user: ansible -->when you connect to target section,use this user to connect
+  sudo: yes --> ability to run commands as a sudo user
+  connection: ssh
+  gather_facts: no

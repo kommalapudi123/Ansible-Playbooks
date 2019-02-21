@@ -1,0 +1,16 @@
+-webserver
+-ansible user
+-sudo rights
+-date/time stamp for when plabook start
+
+-innstall apache webser
+-start the service
+
+-verify service is running
+
+-install clinet s/w
+   -lynx
+   -telnet
+-log all packages install on the system
+-date/time stamp for when playbook ends
+

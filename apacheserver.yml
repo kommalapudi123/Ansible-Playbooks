@@ -1,0 +1,5 @@
+- hosts: apacheserver
+  tasks:
+  - name: Install lynx on app server
+    apt: pkg=lynx state=installed update_cache=true
+

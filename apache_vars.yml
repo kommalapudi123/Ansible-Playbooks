@@ -1,0 +1,9 @@
+- hosts: apacheserver
+  vars: 
+   control_server: 172.17.0.2
+   web_root: /var/www/html/
+  vars_files:
+  - vars.yml
+  tasks:
+  - name: install lynx
+    apt: pkg=lynx state=present update_cache=true
